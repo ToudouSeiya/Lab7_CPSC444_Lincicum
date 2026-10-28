@@ -1,3 +1,5 @@
+//Morgan Lincicum
+
 import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
 const loader = new THREE.TextureLoader();
 //
@@ -66,10 +68,20 @@ scene.add(fireplaceLight);
 // FLOOR
 //
 
+const floorColor = loader.load('textures/hardwood/old_wooden_floor_03_diff_2k.jpg');
+const floorNormal = loader.load('textures/hardwood/old_wooden_floor_03_nor_gl_2k.exr');
+const floorAO = loader.load('textures/hardwood/old_wooden_floor_03_ao_2k.jpg');
+floorColor.wrapS = THREE.RepeatWrapping;
+floorColor.wrapT = THREE.RepeatWrapping;
+floorColor.repeat.set(2, 2);
+
+
 const floor = new THREE.Mesh(
 	new THREE.PlaneGeometry(24, 24),
 	new THREE.MeshStandardMaterial({
-		color: 0x8b5a2b
+		map: floorColor,
+		normalMap: floorNormal,
+		aoMap: floorAO
 	})
 );
 
@@ -308,10 +320,19 @@ scene.add(fire);
 // DOOR
 //
 
+const doorColor = loader.load('textures/door/wood_table_001_diff_2k.jpg');
+doorColor.wrapS = THREE.RepeatWrapping;
+doorColor.wrapT = THREE.RepeatWrapping;
+//doorColor.repeat.set(4,4);
+const doorNormal = loader.load('textures/door/wood_table_001_nor_gl_2k.exr');
+const doorRough = loader.load('textures/door/wood_table_001_rough_2k.jpg');
+
 const door = new THREE.Mesh(
 	new THREE.BoxGeometry(2, 4, 0.15),
 	new THREE.MeshStandardMaterial({
-		color: 0x5b3a29
+		map: doorColor,
+		normalMap: doorNormal,
+		roughnessMap: doorRough
 	})
 );
 
