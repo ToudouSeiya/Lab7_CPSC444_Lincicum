@@ -207,10 +207,16 @@ scene.add(outdoorTreeLeaves);
 // TV STAND
 //
 
+const standColor = loader.load('textures/tvStand/wood_peeling_paint_weathered_diff_2k.jpg');
+const standNormal = loader.load('textures/tvStand/wood_peeling_paint_weathered_nor_gl_2k.exr');
+const standRough = loader.load('textures/tvStand/wood_peeling_paint_weathered_rough_2k.exr');
+
 const tvStand = new THREE.Mesh(
 	new THREE.BoxGeometry(5, 1, 1.5),
 	new THREE.MeshStandardMaterial({
-		color: 0x3a2a20
+		map: standColor,
+		normalMap: standNormal,
+		roughnessMap: standRough
 	})
 );
 
@@ -292,10 +298,16 @@ scene.add(magazine);
 // FIREPLACE
 //
 
+const fireplaceColor = loader.load('textures/fireplace/rock_face_03_diff_2k.jpg');
+const fireplaceNormal = loader.load('textures/fireplace/rock_face_03_nor_gl_2k.exr');
+const fireplaceRough = loader.load('textures/fireplace/rock_face_03_rough_2k.exr');
+
 const fireplace = new THREE.Mesh(
 	new THREE.BoxGeometry(4, 3, 1),
 	new THREE.MeshStandardMaterial({
-		color: 0x555555
+		map: fireplaceColor,
+		normalMap: fireplaceNormal,
+		roughnessMap: fireplaceRough
 	})
 );
 
