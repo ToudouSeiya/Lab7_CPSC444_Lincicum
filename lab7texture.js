@@ -245,10 +245,12 @@ scene.add(tvStand);
 // TV
 //
 
+const tvColor = loader.load('textures/logan-voss-l_Br3SgquWE-unsplash.jpg');
+
 const tv = new THREE.Mesh(
 	new THREE.BoxGeometry(4, 2.2, 0.2),
 	new THREE.MeshStandardMaterial({
-		color: 0x111111,
+		map: tvColor,
 		emissive: 0x2244ff,
 		emissiveIntensity: 0.5
 	})
@@ -261,8 +263,19 @@ scene.add(tv);
 // SOFA
 //
 
+const sofaColor = loader.load('textures/couch/ribbed_corduroy_diff_2k.jpg');
+sofaColor.wrapS = THREE.RepeatWrapping;
+sofaColor.wrapT = THREE.RepeatWrapping;
+sofaColor.repeat.set(0.25, 0.25);
+const sofaNormal = loader.load('textures/couch/ribbed_corduroy_nor_gl_2k.exr');
+const sofaRough = loader.load('textures/couch/ribbed_corduroy_rough_2k.exr');
+const sofaMetal = loader.load('textures/couch/ribbed_corduroy_metal_2k.exr');
+
 const sofaMaterial = new THREE.MeshStandardMaterial({
-	color: 0x505050
+	map: sofaColor,
+	normalMap: sofaNormal,
+	roughnessMap: sofaRough,
+	metalnessMap: sofaMetal
 });
 
 const sofaSeat = new THREE.Mesh(

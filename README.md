@@ -21,3 +21,11 @@ https://polyhaven.com/a/wood_peeling_paint_weathered
 Outdoors:
 Poly Haven
 https://polyhaven.com/a/meadow
+
+Couch:
+Poly Haven
+https://polyhaven.com/a/ribbed_corduroy
+
+TV:
+Unsplash Stock Images
+https://unsplash.com/photos/abstract-grayscale-waveform-with-dark-background-l_Br3SgquWE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
