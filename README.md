@@ -17,3 +17,7 @@ https://polyhaven.com/a/rock_face_03
 TV Stand:
 Poly Haven
 https://polyhaven.com/a/wood_peeling_paint_weathered
+
+Outdoors:
+Poly Haven
+https://polyhaven.com/a/meadow
